@@ -10,8 +10,8 @@
 start :		mov ax, @data
 			mov ds, ax
 			mov es, ax
-			lea di, string
-			lea si, search
+			lea si, string
+			lea di, search
 			mov cx, sealen
 			mov bl, 00h
 			mov al, strlen
@@ -19,7 +19,7 @@ start :		mov ax, @data
 			mov bl, al
 
 			cnt
-	   repe cmpsb
+	   repne cmpsb
 			je found
 
 
